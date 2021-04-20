@@ -1,1 +1,1 @@
-## Project Boilerplate 1. Test
+## Project SCSS Finger Animation
