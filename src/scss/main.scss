@@ -1,4 +1,4 @@
-$items-count: 42; // corresponds to the number of divs in your HTML
+$items-count: 21; // corresponds to the number of divs in your HTML
 
 // Define animation
 @keyframes move {
@@ -45,29 +45,61 @@ body {
     border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
     transform-origin: 0 0;
 
-    @if (($i % 2) != 0) {
-      border-radius: ((random(50) + 10 + px)) ((random(20) + 10 + px)) 0 0;
+    @if (($i == 2) or ($i == 9) or ($i == 16)) {
+      border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
       background: linear-gradient(
         to top right,
         lighten(indigo, random(40)),
         rgba(darken(indigo, random(10)), 1)
       );
     }
-    @if (($i == 3) or ($i == 9)) {
-      border-radius: ((random(50) + 10 + px)) ((random(20) + 10 + px)) 0 0;
+    @if (($i == 3) or ($i == 10) or ($i == 17)) {
+      border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
       background: linear-gradient(
         to top right,
         lighten(blue, random(40)),
         rgba(darken(blue, random(10)), 1)
       );
     }
+    @if (($i == 4) or ($i == 11) or ($i == 18)) {
+      border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
+      background: linear-gradient(
+        to top right,
+        lighten(green, random(40)),
+        rgba(darken(green, random(10)), 1)
+      );
+    }
+    @if (($i == 5) or ($i == 12) or ($i == 19)) {
+      border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
+      background: linear-gradient(
+        to top right,
+        lighten(yellow, random(40)),
+        rgba(darken(yellow, random(15)), 1)
+      );
+    }
+    @if (($i == 6) or ($i == 13) or ($i == 20)) {
+      border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
+      background: linear-gradient(
+        to top right,
+        lighten(orange, random(40)),
+        rgba(darken(orange, random(10)), 1)
+      );
+    }
+    @if (($i == 7) or ($i == 14) or ($i == 21)) {
+      border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
+      background: linear-gradient(
+        to top right,
+        lighten(red, random(40)),
+        rgba(darken(red, random(10)), 1)
+      );
+    }
     // The lighten() function increases lightness by a fixed amount.
     // The darken() function decreases lightness by a fixed amount.
-    @include add-move-animation(random(5) + 1 + s);
+    @include add-move-animation(random(3) + 1 + s);
   }
 }
 
-.item:nth-child(odd) {
-  align-self: end;
-  transform-origin: 0 100%;
-}
+// .item:nth-child(odd) {
+//   align-self: end;
+//   transform-origin: 0 100%;
+// }
